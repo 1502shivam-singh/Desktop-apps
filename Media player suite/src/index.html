@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title id="title">Media Player</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script>let $ = require('jquery');</script>
+</head>
+
+<body>
+      <div id="title-bar">
+       <div id="title">
+         <span id="logo">Reactor:C</span>
+       </div>
+       <div id="title-bar-btns">
+          <button class="nav_btn" id="min-btn"></button>
+          <button class="nav_btn" id="max-btn"></button>
+          <button class="nav_btn" id="close-btn"></button>
+       </div>
+    </div>
+    <video id="video" width="550" height="352"></video>
+    <audio id="audio"></audio>
+
+
+    <div id="ui_cnt">
+      <div id="title-bar-btns-m">
+        <div class="button-m">
+          <button class="nav_btn" id="min-btn-m"></button>
+          <button class="nav_btn" id="max-btn-m"></button>
+          <button class="nav_btn" id="close-btn-m"></button>
+        </div>
+      </div>
+      <div class="flexing">
+        <input id='seek_bar' type="range" step="0.1">
+
+        <div id='time'> 00 : 00 : 00 / 00 : 00 : 00 </div>
+      </div>
+
+        <div id="btn_bar">
+          <div class="left_buttons">
+            <button class="nav_btn" id="left-ext-m"></button>
+            <button class="nav_btn " id="pause_btn" ></button>
+            <button class="nav_btn" id="playback_btn"></button>
+            <button class="nav_btn" id="always_on_top_btn"></button>
+            <button class="nav_btn"  id="next_btn"></button>
+            <button class="nav_btn"  id="loop_btn"></button>
+            <button class="nav_btn"  id="sync_button"></button>
+          </div>
+          <div class="right_butttons">
+            <button class="nav_btn"  id="snapshot"></button>
+            <button class="nav_btn"  id="videosetting"></button>
+            <button class="nav_btn"  id="preference"></button>
+            <button class="nav_btn"  id="quality">-</button>
+            <button class="nav_btn"  id="sound"></button>
+            <input class="volume-bar" type="range" min="0" max="10">
+            <button class="nav_btn" id="right-ext-m"></button>
+          </div>
+        </div>
+
+    <div class="bottom-bar">
+      <button class="nav_btn" id="left-ext"></button>
+        <input class="url_bar" type="text" placeholder="Address here...">
+        <button class="nav_btn search_btn" type="button" name="button"></button>
+
+      <button class="nav_btn" id="right-ext"></button>
+    </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
