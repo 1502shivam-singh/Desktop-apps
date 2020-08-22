@@ -15,3 +15,5 @@ This is media player suite provides many unique features other than just video p
 5) Change language of interface
 
 All this along with a clean UI. 
+
+![image](https://github.com/1502shivam-singh/Desktop-apps/blob/master/Media%20player%20suite/screenshots/preferencesAndMain.png)
