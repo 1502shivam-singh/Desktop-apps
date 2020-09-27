@@ -16,7 +16,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout" stretch="1,4">
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0">
       <item>
        <widget class="QLabel" name="label">
         <property name="frameShape">
@@ -38,10 +38,45 @@
       </item>
       <item>
        <layout class="QGridLayout" name="gridLayout_4">
-        <item row="0" column="1">
-         <widget class="QPushButton" name="p2">
+        <item row="2" column="3">
+         <widget class="QPushButton" name="mult">
           <property name="text">
-           <string>2</string>
+           <string>x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="p4">
+          <property name="text">
+           <string>4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="p8">
+          <property name="text">
+           <string>8</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="p7">
+          <property name="text">
+           <string>7</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="p6">
+          <property name="text">
+           <string>6</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="p9">
+          <property name="text">
+           <string>9</string>
           </property>
          </widget>
         </item>
@@ -56,27 +91,6 @@
          <widget class="QPushButton" name="p0">
           <property name="text">
            <string>0</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="1">
-         <widget class="QPushButton" name="result">
-          <property name="text">
-           <string>=</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QPushButton" name="p8">
-          <property name="text">
-           <string>8</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="3">
-         <widget class="QPushButton" name="mult">
-          <property name="text">
-           <string>x</string>
           </property>
          </widget>
         </item>
@@ -99,17 +113,24 @@
           </property>
          </widget>
         </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="p2">
+          <property name="text">
+           <string>2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QPushButton" name="divide">
+          <property name="text">
+           <string>/</string>
+          </property>
+         </widget>
+        </item>
         <item row="0" column="2">
          <widget class="QPushButton" name="p3">
           <property name="text">
            <string>3</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="2">
-         <widget class="QPushButton" name="p9">
-          <property name="text">
-           <string>9</string>
           </property>
          </widget>
         </item>
@@ -120,31 +141,10 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
-         <widget class="QPushButton" name="p4">
-          <property name="text">
-           <string>4</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QPushButton" name="p7">
-          <property name="text">
-           <string>7</string>
-          </property>
-         </widget>
-        </item>
         <item row="0" column="3">
          <widget class="QPushButton" name="add">
           <property name="text">
            <string>+</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="QPushButton" name="p6">
-          <property name="text">
-           <string>6</string>
           </property>
          </widget>
         </item>
@@ -155,10 +155,24 @@
           </property>
          </widget>
         </item>
-        <item row="3" column="3">
-         <widget class="QPushButton" name="divide">
+        <item row="3" column="1">
+         <widget class="QPushButton" name="result">
           <property name="text">
-           <string>/</string>
+           <string>=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="openB">
+          <property name="text">
+           <string>(</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="closeB">
+          <property name="text">
+           <string>)</string>
           </property>
          </widget>
         </item>
