@@ -173,6 +173,7 @@ void MainWindow::handleResult(){
                 case 'x':   numHold.push(val2*val1);break;
                 case '/':   numHold.push(val2/val1);break;
             }
+            j++;
         }
     }
 
