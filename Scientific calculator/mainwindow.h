@@ -3,8 +3,7 @@
 
 #include <QMainWindow>
 #include <QPushButton>
-#include <iostream>
-#include <string>
+#include <QSet>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,10 +19,12 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QSet<QChar> symSet;
 private slots:
     void handlePush();
     void handleBack();
     void handleResult();
+    void handleClear();
 };
 #endif // MAINWINDOW_H
 
