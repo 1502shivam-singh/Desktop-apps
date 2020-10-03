@@ -1,10 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QStack>
-#include <QTextStream>
 #include <QVector>
-
-QTextStream out(stdout);
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -81,9 +78,9 @@ void MainWindow::handleClear(){
          ui->label->setText("");
 }
 
-//------------------------------------------------------To refactor---------------------------------------------------------
+//------------------------------------------------------function to refactor starts---------------------------------------------------------
+
 void MainWindow::handleResult(){
-    std::cout<<"Pressed";
     QStack<QChar> symHold;
     QVector<int> numbers;
     QVector<QChar> symbols;
@@ -118,6 +115,7 @@ void MainWindow::handleResult(){
 
     j = symbols.size()-1;
 
+    //---------------------------Formation of postfix expression starts here------------------------
     for(int i=numbers.size()-1; i>=0; i--){
         if((char)numbers[i]==' ')
         {
@@ -162,6 +160,8 @@ void MainWindow::handleResult(){
         postExp.push_back(' ');
     }
 
+    //-----------------------Postfix expression formation ends here-----------------------------
+
     numbers.clear();
     symbols.clear();
     j = 0;
@@ -195,7 +195,7 @@ void MainWindow::handleResult(){
     }
 
 }
-//---------------------------------To refactor---------------------------------------
+//---------------------------------function to refactor ends---------------------------------------
 
 /*
 
