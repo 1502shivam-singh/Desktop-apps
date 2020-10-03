@@ -24,11 +24,13 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->openB, SIGNAL(released()), this, SLOT(handlePush()));
     connect(ui->closeB, SIGNAL(released()), this, SLOT(handlePush()));
     connect(ui->back, SIGNAL(released()), this, SLOT(handleBack()));
+    connect(ui->clear, SIGNAL(released()), this, SLOT(handleClear()));
     connect(ui->subtract, SIGNAL(released()), this, SLOT(handlePush()));
     connect(ui->mult, SIGNAL(released()), this, SLOT(handlePush()));
     connect(ui->divide, SIGNAL(released()), this, SLOT(handlePush()));
     connect(ui->add, SIGNAL(released()), this, SLOT(handlePush()));
     connect(ui->result, SIGNAL(released()), this, SLOT(handleResult()));
+    symSet<<'+'<<'-'<<'x'<<'/'<<'('<<')';
 }
 
 MainWindow::~MainWindow()
@@ -54,22 +56,32 @@ void MainWindow::handlePush(){
      if (pButton) // this is the type we expect
      {
          QString buttonText = pButton->text();
-         // recognize buttonText here
-         ui->label->setText((ui->label->text()+buttonText));
+         QString labelText = ui->label->text();
+
+         if(symSet.contains(buttonText[0]) && (labelText.size()!=0 && symSet.contains(labelText[labelText.size()-1])))
+         {
+             //do nothing
+         }
+         else
+         {
+             // recognize buttonText here
+             ui->label->setText((ui->label->text()+buttonText));
+         }
      }
 }
 
-void MainWindow::handleBack(){
-    QPushButton* pButton = qobject_cast<QPushButton*>(sender());
-     if (pButton) // this is the type we expect
-     {
+void MainWindow::handleBack(){   
          QString buttonText = ui->label->text();
          // recognize buttonText here
          buttonText.chop(1);
          ui->label->setText(buttonText);
-     }
 }
 
+void MainWindow::handleClear(){
+         ui->label->setText("");
+}
+
+//------------------------------------------------------To refactor---------------------------------------------------------
 void MainWindow::handleResult(){
     std::cout<<"Pressed";
     QStack<QChar> symHold;
@@ -177,9 +189,13 @@ void MainWindow::handleResult(){
         }
     }
 
+    if(!numHold.isEmpty())
+    {
     ui->label->setText(QString::number(numHold.pop()));
-}
+    }
 
+}
+//---------------------------------To refactor---------------------------------------
 
 /*
 
