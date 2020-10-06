@@ -1,4 +1,3 @@
-
 body{
   margin-top: 0px;
   margin-left: 0px;
@@ -74,7 +73,6 @@ background: url(../ui/preferences_tab_01.png);
   margin-right: 0px;
   margin-left: 1px;
   padding-right: 9px;
-  /* margin-left: 2.8px; */
   margin-top: 6px;
   background: url(../ui/header_close_bl_01.png);
   height: 20px;
