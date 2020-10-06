@@ -222,12 +222,7 @@ body {
 
 @media (max-width: 650px) {
   #time {
-    margin-left: 3px;
-    /* position: relative; */
-    /* display: inline-block; */
     font: 12px Arial;
-    /* margin-left: 1%; */
-    /* margin-right: auto; */
     color: white;
     cursor: default;
     flex-grow: 1;
